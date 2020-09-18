@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative './enigma'
+require_relative './lib/enigma'
 
 ciphertext = File.new(ARGV[0]).read
 
