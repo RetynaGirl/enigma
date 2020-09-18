@@ -2,3 +2,5 @@
 coverage/
 .DS_store
 practice.rb
+encrypted
+message
