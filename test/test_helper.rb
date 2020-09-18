@@ -4,4 +4,6 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'mocha/minitest'
 
-Dir['./lib/*.rb'].each { |file| require file }
+Dir.glob(File.join('**', 'lib', '**', '*.rb')).each do |file|
+  require './' + file unless /.*crypt.rb/.match?(file)
+end
