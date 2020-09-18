@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require_relative './key_gen'
+
 # Runs all code in order and stuff
 class Enigma
   def decrypt(cyphertext, key, date)
