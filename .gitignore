@@ -1,6 +1,8 @@
 # SimpleCov reports
 coverage/
 .DS_store
+
+# Other stuff
 practice.rb
 encrypted
 message
