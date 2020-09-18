@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative './key_gen'
+require_relative './key_applier'
 
 # Runs all code in order and stuff
 class Enigma
