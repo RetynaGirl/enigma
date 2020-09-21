@@ -13,4 +13,8 @@ class KeyGen
       (digit + key[idx + 1]).to_i
     end
   end
+
+  def self.make_offsets(date)
+    (date.to_i**2).to_s.split('')[-4..-1]
+  end
 end
