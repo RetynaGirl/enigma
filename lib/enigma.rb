@@ -12,7 +12,7 @@ class Enigma
   end
 
   def encrypt(message, key, date)
-    encryption_key = KeyGen.encryption_key(key, date)
+    encryption_key = KeyGen.encryption_key(key.to_s, date.to_s)
 
     KeyApplier.apply_key(message, encryption_key)
   end
