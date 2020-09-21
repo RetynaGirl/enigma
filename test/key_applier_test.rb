@@ -6,6 +6,7 @@ class KeyApplierTest < Minitest::Test
   end
 
   def test_wrap_apply
-    assert_equal 'b', KeyApplier.wrap_apply('z', 2)
+    assert_equal 'b', KeyApplier.wrap_apply('z', 3)
+    assert_equal ' ', KeyApplier.wrap_apply('x', 3)
   end
 end
