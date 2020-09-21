@@ -12,4 +12,8 @@ class KeyGenTest < Minitest::Test
   def test_make_offsets
     assert_equal [1, 0, 2, 5], KeyGen.make_offsets('040895')
   end
+
+  def test_decryption_key
+    assert_equal [24, 0, 8, 7], KeyGen.decryption_key('02715', '040895')
+  end
 end
