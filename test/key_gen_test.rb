@@ -1,8 +1,8 @@
 require './test/test_helper'
 
 class KeyGenTest < Minitest::Test
-  def test_encrypt
-    assert_equal [3, 0, 19, 20], KeyGen.encrypt('02715', '040895')
+  def test_encryption_key
+    assert_equal [3, 0, 19, 20], KeyGen.encryption_key('02715', '040895')
   end
 
   def test_make_keys
