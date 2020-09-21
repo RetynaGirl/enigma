@@ -5,7 +5,7 @@ class KeyGen
   def self.encrypt(key, date)
     keys = make_keys(key)
     offsets = make_offsets(date)
-    keys.map.with_index { |key, idx| key + offsets[idx].to_i }
+    keys.map.with_index { |key, idx| key + offsets[idx] }
   end
 
   def self.make_keys(key)
@@ -15,6 +15,6 @@ class KeyGen
   end
 
   def self.make_offsets(date)
-    (date.to_i**2).to_s.split('')[-4..-1]
+    (date.to_i**2).to_s.split('')[-4..-1].map(&:to_i)
   end
 end
