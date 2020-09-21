@@ -7,4 +7,10 @@ class KeyGen
     offsets = make_offsets(date)
     keys.map.with_index { |key, idx| key + offsets[idx].to_i }
   end
+
+  def self.make_keys(key)
+    key.split('')[0..-2].map.with_index do |digit, idx|
+      (digit + key[idx + 1]).to_i
+    end
+  end
 end
