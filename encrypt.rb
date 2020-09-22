@@ -6,7 +6,7 @@ require 'date'
 message = File.new(ARGV[0]).read
 
 key = rand(99_999).to_s
-key = ' ' + key while key.length < 5
+key = '0' + key while key.length < 5
 
 date = DateTime.now.strftime('%d%m%y')
 
