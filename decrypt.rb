@@ -4,7 +4,10 @@ require_relative './lib/enigma'
 
 ciphertext = File.new(ARGV[0]).read
 
-decrypted = Enigma.new.decrypt(ciphertext, ARGV[2], ARGV[3])
+key = ARGV[2]
+key = '0' + key while key.length < 5
+
+decrypted = Enigma.new.decrypt(ciphertext, key, ARGV[3])
 
 decrypted_file = File.new(ARGV[1], 'w')
 decrypted_file.write(decrypted)
